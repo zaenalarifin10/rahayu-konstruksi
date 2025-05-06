@@ -1,0 +1,623 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rahayu Construction | Jasa Konstruksi Profesional</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .hero-section {
+            background-image: url('https://images.unsplash.com/photo-1541888946425-d81bb19240f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        .mobile-menu {
+            transition: all 0.3s ease-in-out;
+            transform: translateY(-100%);
+            opacity: 0;
+            visibility: hidden;
+        }
+        .mobile-menu.active {
+            transform: translateY(0);
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header -->
+    <header class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-4 py-3">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-gray-800">Rahayu <span class="text-yellow-500">Construction</span></h1>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#home" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Beranda</a>
+                    <a href="#services" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Layanan</a>
+                    <a href="#projects" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Proyek</a>
+                    <a href="#about" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Tentang</a>
+                    <a href="#contact" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Kontak</a>
+                </nav>
+                <div class="md:hidden">
+                    <button id="menu-toggle" class="text-gray-800 focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+                <div class="hidden md:block">
+                    <a href="#contact" class="bg-yellow-500 text-white px-6 py-2 rounded-md font-medium hover:bg-yellow-600 transition duration-300">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="bg-white w-full absolute top-16 left-0 shadow-md py-4 px-4 md:hidden mobile-menu">
+            <nav class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Beranda</a>
+                <a href="#services" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Layanan</a>
+                <a href="#projects" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Proyek</a>
+                <a href="#about" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Tentang</a>
+                <a href="#contact" class="text-gray-800 hover:text-yellow-500 font-medium transition duration-300">Kontak</a>
+                <a href="#contact" class="bg-yellow-500 text-white px-6 py-2 rounded-md font-medium hover:bg-yellow-600 transition duration-300 text-center mt-2">Hubungi Kami</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center pt-16">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-800 leading-tight mb-4">Membangun <span class="text-yellow-500">Masa Depan</span> Dengan Keunggulan</h1>
+                    <p class="text-gray-600 text-lg mb-8">Jasa konstruksi premium dengan kualitas dan presisi yang tak tertandingi. Kami membangun bukan hanya struktur, tetapi warisan yang bertahan lama.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="#services" class="bg-yellow-500 text-white px-8 py-3 rounded-md font-medium hover:bg-yellow-600 transition duration-300 text-center">Layanan Kami</a>
+                        <a href="#contact" class="border-2 border-gray-800 text-gray-800 px-8 py-3 rounded-md font-medium hover:bg-gray-800 hover:text-white transition duration-300 text-center">Hubungi Kami</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 flex justify-center">
+                    <div class="relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-yellow-500 rounded-tl-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Construction" class="w-full h-auto rounded-lg shadow-xl relative z-10">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-800 rounded-br-3xl"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-medal text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Jaminan Kualitas</h3>
+                    <p class="text-gray-600">Kami tidak pernah berkompromi pada kualitas, memastikan setiap proyek memenuhi standar tertinggi.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Tepat Waktu</h3>
+                    <p class="text-gray-600">Kami menghargai waktu Anda dan memastikan proyek selesai dalam jangka waktu yang disepakati.</p>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-lg text-center">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-hand-holding-usd text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-2">Harga Terjangkau</h3>
+                    <p class="text-gray-600">Dapatkan nilai terbaik untuk investasi Anda dengan kebijakan harga transparan kami.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Layanan Premium Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Kami menawarkan berbagai layanan konstruksi yang disesuaikan untuk memenuhi kebutuhan dan persyaratan spesifik Anda.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-building text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Konstruksi Komersial</h3>
+                    <p class="text-gray-600 mb-4">Kami ahli dalam membangun ruang komersial yang fungsional, estetis, dan selaras dengan tujuan bisnis Anda.</p>
+                    <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition duration-300 flex items-center">
+                        Pelajari Lebih Lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-home text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Konstruksi Residensial</h3>
+                    <p class="text-gray-600 mb-4">Wujudkan rumah impian Anda dengan layanan konstruksi residensial kami yang disesuaikan dengan preferensi Anda.</p>
+                    <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition duration-300 flex items-center">
+                        Pelajari Lebih Lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-road text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Pengembangan Infrastruktur</h3>
+                    <p class="text-gray-600 mb-4">Kami melaksanakan proyek infrastruktur yang berkontribusi pada pengembangan komunitas dan pertumbuhan perkotaan.</p>
+                    <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition duration-300 flex items-center">
+                        Pelajari Lebih Lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-tools text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Renovasi & Remodeling</h3>
+                    <p class="text-gray-600 mb-4">Berikan tampilan baru pada ruang Anda dengan layanan renovasi dan remodeling kami yang meningkatkan fungsionalitas dan estetika.</p>
+                    <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition duration-300 flex items-center">
+                        Pelajari Lebih Lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-drafting-compass text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Desain Arsitektur</h3>
+                    <p class="text-gray-600 mb-4">Tim arsitek kami menciptakan desain inovatif yang memadukan fungsionalitas dengan daya tarik estetika untuk proyek konstruksi Anda.</p>
+                    <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition duration-300 flex items-center">
+                        Pelajari Lebih Lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+                <div class="service-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-lg flex items-center justify-center mb-6">
+                        <i class="fas fa-hard-hat text-yellow-500 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Manajemen Proyek</h3>
+                    <p class="text-gray-600 mb-4">Kami menawarkan layanan manajemen proyek komprehensif untuk memastikan proyek konstruksi Anda selesai tepat waktu dan sesuai anggaran.</p>
+                    <a href="#contact" class="text-yellow-500 font-medium hover:text-yellow-600 transition duration-300 flex items-center">
+                        Pelajari Lebih Lanjut <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Proyek Unggulan Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Lihat beberapa proyek terbaru kami yang menunjukkan keahlian dan komitmen kami terhadap keunggulan.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Gedung Perkantoran" class="w-full h-64 object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Menara Perkantoran Skyline</h3>
+                        <p class="text-gray-600 mb-4">Gedung perkantoran modern 20 lantai dengan fasilitas canggih dan fitur desain berkelanjutan.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-medium">Komersial</span>
+                            <a href="#" class="text-gray-800 hover:text-yellow-500 transition duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Residensi Mewah" class="w-full h-64 object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Residensi Harmoni</h3>
+                        <p class="text-gray-600 mb-4">Kompleks perumahan mewah dengan fasilitas modern dan desain arsitektur yang elegan.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-medium">Residensial</span>
+                            <a href="#" class="text-gray-800 hover:text-yellow-500 transition duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card bg-white rounded-lg shadow-md overflow-hidden">
+                    <div class="overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590274853856-f22d5ee3d228?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1471&q=80" alt="Proyek Jalan Raya" class="w-full h-64 object-cover transition duration-300">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-800 mb-2">Perluasan Jalan Metro</h3>
+                        <p class="text-gray-600 mb-4">Proyek infrastruktur besar yang memperluas jaringan jalan raya kota dengan fitur keselamatan modern.</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-yellow-500 font-medium">Infrastruktur</span>
+                            <a href="#" class="text-gray-800 hover:text-yellow-500 transition duration-300">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-12">
+                <a href="#contact" class="inline-block bg-yellow-500 text-white px-8 py-3 rounded-md font-medium hover:bg-yellow-600 transition duration-300">Lihat Semua Proyek</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <div class="relative">
+                        <div class="absolute -top-6 -left-6 w-24 h-24 bg-yellow-500 rounded-tl-3xl"></div>
+                        <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Tentang Kami" class="w-full h-auto rounded-lg shadow-xl relative z-10">
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-gray-800 rounded-br-3xl"></div>
+                    </div>
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-6">Tentang Rahayu Construction</h2>
+                    <p class="text-gray-600 mb-6">Didirikan pada tahun 2005, Rahayu Construction telah memantapkan diri sebagai perusahaan konstruksi terkemuka dengan reputasi keunggulan, integritas, dan inovasi. Dengan tim profesional berpengalaman, kami telah berhasil menyelesaikan berbagai proyek di berbagai sektor.</p>
+                    <p class="text-gray-600 mb-8">Misi kami adalah memberikan layanan konstruksi berkualitas tinggi yang melebihi harapan klien sambil mematuhi standar keselamatan, keberlanjutan, dan profesionalisme tertinggi.</p>
+                    <div class="grid grid-cols-2 gap-6 mb-8">
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-users text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">200+</h4>
+                                <p class="text-gray-600">Tim Ahli</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-building text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">500+</h4>
+                                <p class="text-gray-600">Proyek Selesai</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-trophy text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">50+</h4>
+                                <p class="text-gray-600">Penghargaan</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="w-12 h-12 bg-yellow-100 rounded-full flex items-center justify-center mr-4">
+                                <i class="fas fa-smile text-yellow-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-gray-800">1000+</h4>
+                                <p class="text-gray-600">Klien Puas</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contact" class="inline-block bg-yellow-500 text-white px-8 py-3 rounded-md font-medium hover:bg-yellow-600 transition duration-300">Hubungi Kami</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Apa Kata Klien Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Jangan hanya percaya kata-kata kami. Inilah yang dikatakan klien kami tentang pengalaman mereka bekerja sama dengan kami.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Rahayu Construction melampaui harapan kami dalam setiap aspek proyek gedung kantor kami. Perhatian mereka terhadap detail, profesionalisme, dan komitmen terhadap kualitas terlihat jelas selama proses konstruksi."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Klien" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-gray-800 font-semibold">Budi Santoso</h4>
+                            <p class="text-gray-600">CEO, Tech Innovations</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="text-gray-600">5.0</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Kami mempekerjakan Rahayu Construction untuk proyek kompleks perumahan kami, dan mereka memberikan hasil yang luar biasa. Tim mereka profesional, responsif, dan menyelesaikan proyek lebih cepat dari jadwal tanpa mengorbankan kualitas."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Klien" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-gray-800 font-semibold">Siti Rahayu</h4>
+                            <p class="text-gray-600">Pengembang Real Estate</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="text-yellow-500 mr-2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <span class="text-gray-600">4.5</span>
+                    </div>
+                    <p class="text-gray-600 mb-6">"Renovasi ruang komersial kami oleh Rahayu Construction adalah pengalaman yang lancar. Mereka memahami kebutuhan kami dengan sempurna dan mengubah ruang kami menjadi area modern dan fungsional yang telah menerima banyak pujian."</p>
+                    <div class="flex items-center">
+                        <img src="https://randomuser.me/api/portraits/men/62.jpg" alt="Klien" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="text-gray-800 font-semibold">Hendra Wijaya</h4>
+                            <p class="text-gray-600">Pemilik Bisnis</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Hubungi Kami</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Punya proyek dalam pikiran atau ingin tahu lebih banyak tentang layanan kami? Hubungi kami hari ini untuk konsultasi gratis.</p>
+            </div>
+            <div class="flex flex-col lg:flex-row">
+                <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
+                    <form class="bg-white p-8 rounded-lg shadow-md">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-medium mb-2">Nama</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Nama Anda">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Email Anda">
+                            </div>
+                        </div>
+                        <div class="mb-6">
+                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telepon</label>
+                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Nomor Telepon Anda">
+                        </div>
+                        <div class="mb-6">
+                            <label for="service" class="block text-gray-700 font-medium mb-2">Layanan yang Diminati</label>
+                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                                <option value="">Pilih Layanan</option>
+                                <option value="commercial">Konstruksi Komersial</option>
+                                <option value="residential">Konstruksi Residensial</option>
+                                <option value="infrastructure">Pengembangan Infrastruktur</option>
+                                <option value="renovation">Renovasi & Remodeling</option>
+                                <option value="design">Desain Arsitektur</option>
+                                <option value="management">Manajemen Proyek</option>
+                            </select>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Ceritakan tentang proyek Anda"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-yellow-500 text-white py-3 rounded-md font-medium hover:bg-yellow-600 transition duration-300">Kirim Pesan</button>
+                    </form>
+                </div>
+                <div class="lg:w-1/2 lg:pl-12">
+                    <div class="bg-white p-8 rounded-lg shadow-md h-full">
+                        <div class="mb-8">
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Informasi Kontak</h3>
+                            <div class="flex items-start mb-4">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-map-marker-alt text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Alamat</h4>
+                                    <p class="text-gray-600">Jl. Konstruksi No. 123, Kawasan Industri, Jakarta 12345</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-4">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-phone-alt text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Telepon</h4>
+                                    <p class="text-gray-600">+62 (21) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start mb-4">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-envelope text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Email</h4>
+                                    <p class="text-gray-600">info@rahayuconstruction.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center mr-4 mt-1">
+                                    <i class="fas fa-clock text-yellow-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="text-gray-800 font-medium">Jam Kerja</h4>
+                                    <p class="text-gray-600">Senin - Jumat: 8:00 - 17:00</p>
+                                    <p class="text-gray-600">Sabtu: 9:00 - 13:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold text-gray-800 mb-4">Ikuti Kami</h3>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 hover:bg-yellow-500 hover:text-white transition duration-300">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 hover:bg-yellow-500 hover:text-white transition duration-300">
+                                    <i class="fab fa-twitter"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 hover:bg-yellow-500 hover:text-white transition duration-300">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 bg-yellow-100 rounded-full flex items-center justify-center text-yellow-500 hover:bg-yellow-500 hover:text-white transition duration-300">
+                                    <i class="fab fa-linkedin-in"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Rahayu Construction</h3>
+                    <p class="text-gray-400 mb-4">Membangun keunggulan, satu proyek pada satu waktu. Kami berkomitmen untuk memberikan layanan konstruksi berkualitas tinggi yang melebihi harapan klien.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Layanan</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Konstruksi Komersial</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Konstruksi Residensial</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Pengembangan Infrastruktur</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Renovasi & Remodeling</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Desain Arsitektur</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Manajemen Proyek</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-yellow-500 transition duration-300">Beranda</a></li>
+                        <li><a href="#services" class="text-gray-400 hover:text-yellow-500 transition duration-300">Layanan</a></li>
+                        <li><a href="#projects" class="text-gray-400 hover:text-yellow-500 transition duration-300">Proyek</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-yellow-500 transition duration-300">Tentang Kami</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-yellow-500 transition duration-300">Kontak</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-400 mb-4">Berlangganan newsletter kami untuk menerima update tentang proyek terbaru dan berita kami.</p>
+                    <form>
+                        <div class="flex">
+                            <input type="email" placeholder="Email Anda" class="px-4 py-2 w-full rounded-l-md focus:outline-none text-gray-800">
+                            <button type="submit" class="bg-yellow-500 text-white px-4 py-2 rounded-r-md hover:bg-yellow-600 transition duration-300">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 mb-4 md:mb-0">&copy; 2023 Rahayu Construction. Hak Cipta Dilindungi.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Kebijakan Privasi</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Syarat Layanan</a>
+                        <a href="#" class="text-gray-400 hover:text-yellow-500 transition duration-300">Kebijakan Cookie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="fixed bottom-6 right-6 w-12 h-12 bg-yellow-500 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-yellow-600 transition duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuToggle = document.getElementById('menu-toggle');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            menuToggle.addEventListener('click', function() {
+                mobileMenu.classList.toggle('active');
+            });
+
+            // Close mobile menu when clicking on a link
+            const mobileLinks = mobileMenu.querySelectorAll('a');
+            mobileLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    mobileMenu.classList.remove('active');
+                });
+            });
+
+            // Close mobile menu when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileMenu.contains(event.target) && !menuToggle.contains(event.target)) {
+                    mobileMenu.classList.remove('active');
+                }
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
