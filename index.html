@@ -402,39 +402,50 @@
             </div>
             <div class="flex flex-col lg:flex-row">
                 <div class="lg:w-1/2 lg:pr-12 mb-10 lg:mb-0">
-                    <form class="bg-white p-8 rounded-lg shadow-md">
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-                            <div>
-                                <label for="name" class="block text-gray-700 font-medium mb-2">Nama</label>
-                                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Nama Anda">
-                            </div>
-                            <div>
-                                <label for="email" class="block text-gray-700 font-medium mb-2">Email</label>
-                                <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Email Anda">
-                            </div>
-                        </div>
-                        <div class="mb-6">
-                            <label for="phone" class="block text-gray-700 font-medium mb-2">Telepon</label>
-                            <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Nomor Telepon Anda">
-                        </div>
-                        <div class="mb-6">
-                            <label for="service" class="block text-gray-700 font-medium mb-2">Layanan yang Diminati</label>
-                            <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
-                                <option value="">Pilih Layanan</option>
-                                <option value="commercial">Konstruksi Komersial</option>
-                                <option value="residential">Konstruksi Residensial</option>
-                                <option value="infrastructure">Pengembangan Infrastruktur</option>
-                                <option value="renovation">Renovasi & Remodeling</option>
-                                <option value="design">Desain Arsitektur</option>
-                                <option value="management">Manajemen Proyek</option>
-                            </select>
-                        </div>
-                        <div class="mb-6">
-                            <label for="message" class="block text-gray-700 font-medium mb-2">Pesan</label>
-                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent" placeholder="Ceritakan tentang proyek Anda"></textarea>
-                        </div>
-                        <button type="submit" class="w-full bg-yellow-500 text-white py-3 rounded-md font-medium hover:bg-yellow-600 transition duration-300">Kirim Pesan</button>
-                    </form>
+                           <form id="waForm" class="space-y-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-1">Nama</label>
+                <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nama Lengkap" required>
+                <p id="nameError" class="text-red-500 text-sm mt-1 hidden">Nama harus diisi</p>
+              </div>
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-1">Telepon</label>
+                <input type="tel" id="phone" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Nomor Telepon" required>
+                <p id="phoneError" class="text-red-500 text-sm mt-1 hidden">Nomor telepon harus diisi</p>
+              </div>
+            </div>
+            
+            <div>
+              <label for="email" class="block text-gray-700 font-medium mb-1">Email</label>
+              <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Email Anda" required>
+              <p id="emailError" class="text-red-500 text-sm mt-1 hidden">Email tidak valid</p>
+            </div>
+            
+            <div>
+              <label for="service" class="block text-gray-700 font-medium mb-1">Layanan</label>
+              <select id="service" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" required>
+                <option value="">Pilih Layanan</option>
+                <option value="Konstruksi Bangunan">Konstruksi Bangunan</option>
+                <option value="Renovasi">Renovasi</option>
+                <option value="Desain Arsitektur">Desain Arsitektur</option>
+                <option value="Konsultasi Proyek">Konsultasi Proyek</option>
+                <option value="Pengawasan Konstruksi">Pengawasan Konstruksi</option>
+                <option value="Lainnya">Lainnya</option>
+              </select>
+              <p id="serviceError" class="text-red-500 text-sm mt-1 hidden">Silakan pilih layanan</p>
+            </div>
+            
+            <div>
+              <label for="message" class="block text-gray-700 font-medium mb-1">Pesan</label>
+              <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Deskripsikan kebutuhan proyek Anda" required></textarea>
+              <p id="messageError" class="text-red-500 text-sm mt-1 hidden">Pesan harus diisi</p>
+            </div>
+            
+            <button type="submit" class="w-full bg-blue-800 text-white py-3 px-4 rounded-md hover:bg-blue-700 transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+              Kirim Pesan
+            </button>
+                           </form>
                 </div>
                 <div class="lg:w-1/2 lg:pl-12">
                     <div class="bg-white p-8 rounded-lg shadow-md h-full">
@@ -619,5 +630,66 @@
             });
         });
     </script>
+ <script>
+  document.getElementById('waForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Reset error messages
+    document.querySelectorAll('#waForm p[id$="Error"]').forEach(el => el.classList.add('hidden'));
+    
+    // Get form values
+    let name = document.getElementById('name').value.trim();
+    let phone = document.getElementById('phone').value.trim();
+    let email = document.getElementById('email').value.trim();
+    let service = document.getElementById('service').value;
+    let message = document.getElementById('message').value.trim();
+    
+    // Validate form
+    let isValid = true;
+    
+    if (!name) {
+      document.getElementById('nameError').classList.remove('hidden');
+      isValid = false;
+    }
+    
+    if (!phone) {
+      document.getElementById('phoneError').classList.remove('hidden');
+      isValid = false;
+    }
+    
+    if (!email || !/^\S+@\S+\.\S+$/.test(email)) {
+      document.getElementById('emailError').classList.remove('hidden');
+      isValid = false;
+    }
+    
+    if (!service) {
+      document.getElementById('serviceError').classList.remove('hidden');
+      isValid = false;
+    }
+    
+    if (!message) {
+      document.getElementById('messageError').classList.remove('hidden');
+      isValid = false;
+    }
+    
+    // If form is valid, send to WhatsApp
+    if (isValid) {
+      let text = `Halo Admin Rahayu Konstruksi, saya ingin konsultasi:\n` +
+                `Nama: ${name}\n` +
+                `Telepon: ${phone}\n` +
+                `Email: ${email}\n` +
+                `Layanan: ${service}\n` +
+                `Pesan: ${message}`;
+      
+      let nomorWA = '62895343157218'; // ganti dengan nomor WA kamu
+      let waLink = `https://wa.me/${nomorWA}?text=${encodeURIComponent(text)}`;
+      
+      window.open(waLink, '_blank');
+      
+      // Reset form after successful submission
+      document.getElementById('waForm').reset();
+    }
+  });
+</script>
 </body>
 </html>
