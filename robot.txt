@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://konstruksi.rahayugroup.com/sitemap.xml
